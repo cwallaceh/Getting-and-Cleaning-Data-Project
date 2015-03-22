@@ -44,7 +44,7 @@ tidy_data <- cbind(x_data, y_data, subject_data)
 independent_tidy_data <- aggregate(tidy_data[, 1:66], by = list(as.factor(tidy_data$subject), as.factor(tidy_data$activity)), FUN = "mean")
 
 # Rename the subject and acitivty columns
-independent_tidy_data <- rename(independent_tidy_data , c("Group.1"="subject", "Group.2"="acitivy"))
+independent_tidy_data <- rename(independent_tidy_data , c("Group.1"="subject", "Group.2"="activity"))
 
 # Save the data as a table
-write.table(independet_tidy_data, "independent_tidy_data.txt", row.name=FALSE)
+write.table(independent_tidy_data, "independent_tidy_data.txt", row.name=FALSE)
